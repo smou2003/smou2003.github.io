@@ -2,18 +2,22 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,700;1,700&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
 <style>
 * {box-sizing: border-box;}
 
 body { 
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #8e7cc3ff;
 }
 
 .header {
   overflow: hidden;
-  background-color: #8e7cc3ff;
+  background-color: #b4a7d6ff;
 }
 
 .header a {
@@ -32,13 +36,13 @@ body {
 }
 
 .header a:hover {
-  background-color: #b4a7d6ff;
+  background-color: #8e7cc3ff;
   color: black;
 }
 
 .header a.active {
-  background-color: #b4a7d6ff;
-  color: white;
+  background-color: #8e7cc3ff;
+  color: black;
 }
 
 .header-right {
@@ -46,15 +50,26 @@ body {
 }
 
 .footer {
+  height: 30px;
   display: flex;
   font-family: 'Roboto Mono';
   padding-top: 20px;
   justify-content: center;
+  background-color: #8e7cc3ff;
+  padding-bottom: 0px;
 }
 
 .footer a {
   text-decoration: none;
   color: black;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.footer img:hover {
+  filter: invert(1);
 }
 
 @media screen and (max-width: 500px) {
@@ -71,34 +86,39 @@ body {
 
 h1 {
   font-family: 'Roboto Mono';
-  padding-left: 20px;
-  padding-top:0px;
 }
 
 h2 {
   font-family: 'Roboto Mono';
-  padding-top:20px;
-  padding-bottom:0px;
-  padding-left:20px;
+}
+
+p {
+  font-family: 'Roboto';
 }
 
 .middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-size: cover;
   background-repeat:no-repeat;
-  background-image: url('https://i.pinimg.com/474x/dd/22/81/dd2281844d83b3ee0c9ef70c3c53ac0a.jpg');
-  height: 83vh;
+  background-image: url('tryme2.jpg');
   padding: 0px;
+  height: 83vh;
 }
 
 .innerRectangle {
-  position: fixed;
-  width: 500px;
-  height: 200px;
-  left = 400px;
-  top = 400px;
+  display: flex;
+  flex-direction: column;
+  width: 750px;
+  height: 400px;
   background: rgba(255,255,255,0.5);
   padding-left: 50px;
-  padding-top:10px;
+  padding-right: 50px;
+  padding-top: 30px;
+  justify-content: center;
+  align-items: center;
+  line-height: 0.1;
 }
 
 </style>
@@ -117,7 +137,11 @@ h2 {
 <div class="middle">
   <div class="innerRectangle">
     <h2>Welcome to</h2>
-    <h1>CGA Studios!</h1>
+    <h1>Computer Graphics & Animation!</h1>
+    <break style="margin:20px">
+    <p style="line-height:2"> We are Carnegie Mellon University's very own computer graphics and animation club!</p>
+    <p style="line-height:2">We aim to bring students from all studies interested in any kind of computer graphics and animation into one place to spark innovation, creativity, and excitement for the digital arts.</p>
+    <p style="line-height:2">Join us for workshops, industry talks, collaborative animation projects, and socials!</p>
   </div>
 </div>
 
