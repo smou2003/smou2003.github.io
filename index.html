@@ -13,12 +13,34 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #8e7cc3ff;
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-image: url('background.jpg');
+}
+
+h1 {
+  font-family: 'Roboto Mono';
+  font-size: min(5vw, 5vh);
+  line-height: min(5vw, 5vh);
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Roboto Mono';
+  font-size: min(3vw, 3vh);
+  line-height: min(3vw, 3vh);
+}
+
+p {
+  font-family: 'Roboto';
+  font-size: min(2.5vw, 2.5vh);
+  line-height: min(2.5vw, 2.5vh);
 }
 
 .header {
-  overflow: hidden;
   background-color: #b4a7d6ff;
   height: 8.5vh;
+  width: 100vw;
 }
 
 .header a {
@@ -26,7 +48,8 @@ body {
   float: left;
   color: black;
   text-align: center;
-  padding: 1vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
   text-decoration: none;
   font-size: min(2vw, 2vh);
   line-height: 8.5vh;
@@ -34,12 +57,17 @@ body {
 }
 
 .header a.logo {
-  padding-top: 1vh;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .header a:hover {
   background-color: #8e7cc3ff;
   color: black;
+}
+
+.header a.logo:hover {
+  background-color: rgb(0,0,0,0)
 }
 
 .header a.active {
@@ -49,16 +77,6 @@ body {
 
 .header-right {
   float: right;
-}
-
-.footer {
-  height: 8.5vh;
-  display: flex;
-  font-family: 'Roboto Mono';
-  justify-content: center;
-  background-color: #b4a7d6ff;
-  padding-bottom: 0px;
-  gap: 2vw;
 }
 
 @media screen and (max-width: 500px) {
@@ -73,43 +91,36 @@ body {
   }
 }
 
-h1 {
-  font-family: 'Roboto Mono';
-  font-size: min(5vw, 5vh);
-}
-
-h2 {
-  font-family: 'Roboto Mono';
-  font-size: min(3vw, 3vh);
-}
-
-p {
-  font-family: 'Roboto';
-  font-size: min(2vw, 2vh);
-}
-
 .middle {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-size: cover;
-  background-repeat:no-repeat;
-  background-image: url('background.jpg');
   padding: 0px;
-  height: 83vh;
+  height: 82vh;
+  width: 100vw;
 }
 
 .innerRectangle {
   display: flex;
   flex-direction: column;
   width: 60vw;
-  height: 55vh;
+  height: 70vh;
   background: rgba(255,255,255,0.5);
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 30px;
   justify-content: center;
   align-items: center;
+}
+
+.footer {
+  height: 8.5vh;
+  display: flex;
+  font-family: 'Roboto Mono';
+  justify-content: center;
+  background-color: #b4a7d6ff;
+  padding-bottom: 0px;
+  gap: 2vw;
 }
 
 .footer elem {
@@ -133,7 +144,7 @@ p {
 <body>
 
 <div class="header">
-  <a href="index.html" class="logo"><img src="cga-logo.png" style="padding-left:10px; padding-right: 15px; height:min(5vw,5vh)"></a>
+  <a href="index.html" class="logo" style="padding: 0"><img src="cga-logo.png" style="padding-left:1vw; padding-right: 1vw; height:min(7vw,7vh); padding-top: 0; padding-bottom: 0"></a>
   <div class="header-right">
     <a href="about.html">About</a>
     <a href="resources.html">Resources</a>
@@ -146,10 +157,9 @@ p {
   <div class="innerRectangle">
     <h2>Welcome to</h2>
     <h1>Computer Graphics & Animation!</h1>
-    <break style="margin:20px">
-    <p style="line-height:2"> We are Carnegie Mellon University's very own computer graphics and animation club!</p>
-    <p style="line-height:2">We aim to bring students from all studies interested in any kind of computer graphics and animation into one place to spark innovation, creativity, and excitement for the digital arts.</p>
-    <p style="line-height:2">Join us for workshops, industry talks, collaborative animation projects, and socials!</p>
+    <p> We are Carnegie Mellon University's very own computer graphics and animation club!</p>
+    <p> We aim to bring students from all studies interested in any kind of computer graphics and animation into one place to spark innovation, creativity, and excitement for the digital arts.</p>
+    <p>Join us for workshops, industry talks, collaborative animation projects, and socials!</p>
   </div>
 </div>
 
@@ -163,7 +173,7 @@ p {
   <a href="https://www.youtube.com/@CGAStudios" style="padding-left: 10px; font-size: min(2vh,2vw)" target="_blank">@CGAStudios</a>
   </elem>
   <elem>
-  <img src="https://cdn-icons-png.flaticon.com/512/1936/1936319.png" style="height:min(3.5vw,3.5vh); padding-top: 5px; padding-bottom: 5px">
+  <img src="https://cdn-icons-png.flaticon.com/512/1936/1936319.png" style="height:min(4.5vw,4.5vh); padding-top: 5px; padding-bottom: 5px">
   <a href="https://www.instagram.com/cmu_cga/" style="padding-left: 10px; font-size: min(2vh,2vw)" target="_blank">@cmu_cga</a>
   </elem>
 </div>
