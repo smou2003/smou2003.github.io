@@ -15,10 +15,45 @@ body {
   background-color: #8e7cc3ff;
 }
 
+h1 {
+  font-family: 'Roboto Mono';
+  font-size: min(5vw, 5vh);
+  line-height: min(5vw, 5vh);
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Roboto Mono';
+  font-size: min(3vw, 3vh);
+  line-height: min(3vw, 3vh);
+}
+
+p {
+  font-family: 'Roboto';
+  font-size: min(2.5vw, 2.5vh);
+  line-height: min(2.5vw, 2.5vh);
+}
+
+dt {
+  font-family: 'Roboto';
+  font-size: min(2.5vw, 2.5vh);
+  line-height: min(2.5vw, 2.5vh);
+}
+
+dd {
+  font-family: 'Roboto';
+  font-size: min(2.5vw, 2.5vh);
+  line-height: min(2.5vw, 2.5vh);
+}
+
 .header {
-  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   background-color: #b4a7d6ff;
   height: 8.5vh;
+  width: 100vw;
 }
 
 .header a {
@@ -26,15 +61,18 @@ body {
   float: left;
   color: black;
   text-align: center;
-  padding: 12px;
+  padding-left: 1vw;
+  padding-right: 1vw;
   text-decoration: none;
-  font-size: 18px; 
+  font-size: min(2vw, 2vh);
   line-height: 8.5vh;
   padding-top: 0px;
 }
 
 .header a.logo {
-  padding: 1vh;
+  padding-left: 1vw;
+  padding-top: 1vw;
+  text-align: center;
 }
 
 .header a:hover {
@@ -42,23 +80,18 @@ body {
   color: black;
 }
 
+.header a.logo:hover {
+  background-color: rgb(0,0,0,0)
+}
+
 .header a.active {
-  background-color: #8e7cc3ff;
+  background-color: #7765adff;
   color: black;
 }
 
 .header-right {
-  float: right;
-}
-
-.footer {
-  height: 8.5vh;
   display: flex;
-  font-family: 'Roboto Mono';
-  justify-content: center;
-  background-color: #b4a7d6ff;
-  padding-bottom: 0px;
-  gap: 30px;
+  flex-direction: row;
 }
 
 @media screen and (max-width: 500px) {
@@ -73,23 +106,23 @@ body {
   }
 }
 
-h1 {
-  font-family: 'Roboto Mono';
-  font-size: 50px;
-}
-
-h2 {
-  font-family: 'Roboto Mono';
-}
-
-p {
-  font-family: 'Roboto';
-}
-
 .middle {
-  padding-left: 50px;
-  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
   height: 83vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  align-items: flex-start;
+}
+
+.footer {
+  height: 8.5vh;
+  display: flex;
+  font-family: 'Roboto Mono';
+  justify-content: center;
+  background-color: #b4a7d6ff;
+  padding-bottom: 0px;
+  gap: 2vw;
 }
 
 .footer elem {
@@ -106,19 +139,19 @@ p {
 .footer elem:hover {
   filter: invert(1);
   color: white;
-} 
+}
 
 </style>
 </head>
 <body>
 
 <div class="header">
-  <a href="index.html" class="logo"><img src="cga-logo.png" style="padding-left:10px; padding-right: 15px; height:50px"></a>
+  <a href="index.html" class="logo"><img src="cga-logo.png" style="height:min(7vw,7vh); padding-top: 3px; padding-bottom: 0"></a>
   <div class="header-right">
     <a href="about.html">About</a>
     <a href="resources.html">Resources</a>
     <a href="contact.html">Contact</a>
-    <a href="join.html">Join</a>
+    <a class="active" href="join.html">Join</a>
   </div>
 </div>
 
@@ -128,16 +161,16 @@ p {
 
 <div class="footer">
   <elem>
-  <img src="https://cdn-icons-png.flaticon.com/512/88/88264.png" style="height:25px; padding-top: 0px; padding-bottom: 0px">
-  <a href="mailto:cgastudios@andrew.cmu.edu" style="padding-left: 10px">cgastudios@andrew.cmu.edu</a>
+  <img src="https://cdn-icons-png.flaticon.com/512/88/88264.png" style="height:min(3vh,3vw); padding-top: 0px; padding-bottom: 0px">
+  <a href="mailto:cgastudios@andrew.cmu.edu" style="padding-left: 10px; font-size: min(2vh,2vw)">cgastudios@andrew.cmu.edu</a>
   </elem>
   <elem>
-  <img src="https://cdn-icons-png.flaticon.com/512/1077/1077046.png" style="height:25px; padding-top: 0px; padding-bottom: 0px">
-  <a href="https://www.youtube.com/@CGAStudios" style="padding-left: 10px" target="_blank">@CGAStudios</a>
+  <img src="https://cdn-icons-png.flaticon.com/512/1077/1077046.png" style="height:min(3vh,3vw); padding-top: 0px; padding-bottom: 0px">
+  <a href="https://www.youtube.com/@CGAStudios" style="padding-left: 10px; font-size: min(2vh,2vw)" target="_blank">@CGAStudios</a>
   </elem>
   <elem>
-  <img src="https://cdn-icons-png.flaticon.com/512/1936/1936319.png" style="height:40px; padding-top: 5px; padding-bottom: 5px">
-  <a href="https://www.instagram.com/cmu_cga/ "style="padding-left: 10px" target="_blank">@cmu_cga</a>
+  <img src="https://cdn-icons-png.flaticon.com/512/1936/1936319.png" style="height:min(4.5vw,4.5vh); padding-top: 5px; padding-bottom: 5px">
+  <a href="https://www.instagram.com/cmu_cga/" style="padding-left: 10px; font-size: min(2vh,2vw)" target="_blank">@cmu_cga</a>
   </elem>
 </div>
 

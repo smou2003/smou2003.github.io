@@ -38,6 +38,10 @@ p {
 }
 
 .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   background-color: #b4a7d6ff;
   height: 8.5vh;
   width: 100vw;
@@ -57,8 +61,9 @@ p {
 }
 
 .header a.logo {
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-left: 1vw;
+  padding-top: 1vw;
+  text-align: center;
 }
 
 .header a:hover {
@@ -71,12 +76,13 @@ p {
 }
 
 .header a.active {
-  background-color: #8e7cc3ff;
+  background-color: #7765adff;
   color: black;
 }
 
 .header-right {
-  float: right;
+  display: flex;
+  flex-direction: row;
 }
 
 @media screen and (max-width: 500px) {
@@ -96,7 +102,7 @@ p {
   justify-content: center;
   align-items: center;
   padding: 0px;
-  height: 82vh;
+  height: 83vh;
   width: 100vw;
 }
 
@@ -144,7 +150,7 @@ p {
 <body>
 
 <div class="header">
-  <a href="index.html" class="logo" style="padding: 0"><img src="cga-logo.png" style="padding-left:1vw; padding-right: 1vw; height:min(7vw,7vh); padding-top: 0; padding-bottom: 0"></a>
+  <a href="index.html" class="logo"><img src="cga-logo.png" style="height:min(7vw,7vh); padding-top: 3px; padding-bottom: 0"></a>
   <div class="header-right">
     <a href="about.html">About</a>
     <a href="resources.html">Resources</a>
