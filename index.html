@@ -52,6 +52,20 @@ p {
   float: left;
   color: black;
   text-align: center;
+  align-content: center;
+  align-items: center;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  text-decoration: none;
+  font-size: min(2vw, 2vh);
+  line-height: 8.5vh;
+}
+
+.header p {
+  font-family: 'Roboto Mono';
+  float: left;
+  color: black;
+  text-align: center;
   padding-left: 1vw;
   padding-right: 1vw;
   text-decoration: none;
@@ -83,6 +97,43 @@ p {
 .header-right {
   display: flex;
   flex-direction: row;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+}
+
+.dropdown-content {
+  margin-top: 8.5vh;
+  display: none;
+  position: absolute;
+  background-color: #b4a7d6ff;
+  z-index: 1;
+}
+
+.dropdown-content button {
+  background-color: #b4a7d6ff;
+  border: none;
+  color: black;
+  font-family: 'Roboto Mono';
+  font-size: min(2vw, 2vh);
+  width: 12vw;
+  height: 8vh;
+}
+
+.dropdown-content button:hover {
+  background-color: #8e7cc3ff;
+}
+
+.dropdown:hover .dropdown-content{
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown:hover a{
+  background-color: #8e7cc3ff;
 }
 
 @media screen and (max-width: 500px) {
@@ -153,7 +204,20 @@ p {
   <a href="index.html" class="logo"><img src="cga-logo.png" style="height:min(7vw,7vh); padding-top: 3px; padding-bottom: 0"></a>
   <div class="header-right">
     <a href="about.html">About</a>
-    <a href="resources.html">Resources</a>
+    <div class="dropdown">
+      <a href="resources.html">Resources</a>
+      <div class="dropdown-content">
+        <form action="software_and_club_computer.html">
+          <button>Software and Club Computer</button>
+        </form>
+        <form action="past_workshops.html">
+          <button>Past Workshops</button>
+        </form>
+        <form action="calendar.html">
+          <button>Calendar</button>
+        </form>
+      </div>
+    </div>
     <a href="contact.html">Contact</a>
     <a href="join.html">Join</a>
   </div>
